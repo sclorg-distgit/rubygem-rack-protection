@@ -3,12 +3,12 @@
 
 %global gem_name rack-protection
 
-%global bootstrap 1
+%global bootstrap 0
 
 Summary:        Ruby gem that protects against typical web attacks
 Name:           %{?scl_prefix}rubygem-%{gem_name}
 Version:        1.5.3
-Release:        3%{?dist}
+Release:        4%{?dist}
 Group:          Development/Languages
 License:        MIT
 URL:            http://github.com/rkh/rack-protection
@@ -80,6 +80,9 @@ chmod a-x %{buildroot}%{gem_instdir}/spec/protection_spec.rb
 %doc %{gem_docdir}
 
 %changelog
+* Wed Feb 10 2016 Dominic Cleal <dcleal@redhat.com> 1.5.3-4
+- Enable package check
+
 * Fri Jan 22 2016 Dominic Cleal <dcleal@redhat.com> 1.5.3-3
 - Rebuild for sclo-ror42 SCL
 
